@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import 'vars';
+
+.probando {
+  background-color: $fondo-claro;
+  color: red !important;
+}
