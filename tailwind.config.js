@@ -1,10 +1,16 @@
+const { fontFamily } = require('tailwindcss/defaultTheme');
+
 module.exports = {
-  content: [
-    "./src/pages/**/*.{js,ts,jsx,tsx}",
-    "./src/components/**/*.{js,ts,jsx,tsx}",
-  ],
+  darkMode: 'class',
+  content: ['./src/pages/**/*.{js,ts,jsx,tsx}', './src/components/**/*.{js,ts,jsx,tsx}'],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        sans: ['Georgia', ...fontFamily.sans],
+      },
+      typography: (theme) => ({}),
+    },
   },
-  plugins: [],
+  variants: { typography: ['dark'] },
+  plugins: [require('@tailwindcss/typography')],
 };
