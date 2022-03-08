@@ -1,47 +1,45 @@
+import Head from 'next/head';
 import { createRef, useEffect } from 'react';
-//import Layout from '@components/layout';
+import Date from '@components/Date';
 import { getAllPostIds, getPostData } from '@lib/posts';
-//import Head from 'next/head';
-//import Date from '@components/date';
-//import wordCounter from '@components/word-counter';
-//import Comment from '@components/comment';
-//import setCommentScript from '@components/commentScript';
-//import styles from '@styles/pages.module.scss';
+import Layout from '@components/Layout';
+import WordCounter from '@components/WordCounter';
+import Comment from '@components/Comment';
+import SetCommentScript from '@components/SetCommentScript';
 
 const Post = ({ postData }) => {
-  // const readingTime = wordCounter(postData.contentHtml);
-  // const commentBox = createRef();
+  const ReadingTime = WordCounter(postData.contentHtml);
+  const CommentBox = createRef();
 
-  // // Agrego el script de los comentarios con Utterances.
-  // useEffect(() => {
-  //   const commentScript = setCommentScript();
-  //   commentBox && commentBox.current ? commentBox.current.appendChild(commentScript) : console.error(`Error adding utterances comments on: ${commentBox}`);
-  // }, [commentBox]);
+  // Agrego el script de los comentarios con Utterances.
+  useEffect(() => {
+    const CommentScript = SetCommentScript();
+    CommentBox && CommentBox.current ? CommentBox.current.appendChild(CommentScript) : console.error(`Error adding utterances comments on: ${CommentBox}`);
+  }, [CommentBox]);
 
   return (
-    // <Layout>
-    //   <Head>
-    //     <title>{postData.title}</title>
-    //   </Head>
-    <article>
-      <h1>{postData.title}</h1>
-      <div>
-        <div>Por {postData.author}</div>
-        {/* <div>
-          <Date dateString={postData.date} />
-        </div> 
-        <div>Lectura de {readingTime} min</div>*/}
-      </div>
-      <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
-      <div>
+    <Layout>
+      <Head>
+        <title>{postData.title}</title>
+      </Head>
+      <article>
+        <h1>{postData.title}</h1>
         <div>
-          <h2>Comentarios</h2>
-          {/* <Comment commentBox={commentBox} /> */}
+          <div>Por {postData.author}</div>
+          <div>
+            <Date dateString={postData.date} />
+          </div>
+          <div>Lectura de {ReadingTime} min</div>
         </div>
-      </div>
-    </article>
-
-    //</Layout>
+        <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
+        <div>
+          <div>
+            <h2>Comentarios</h2>
+            <Comment CommentBox={CommentBox} />
+          </div>
+        </div>
+      </article>
+    </Layout>
   );
 };
 

@@ -10,6 +10,9 @@ const nextConfig = {
   sassOptions: {
     includePaths: [path.join(process.cwd(), 'src/styles')],
   },
+  env: {
+    COMMENT_BLOG: 'GregorCode/comentarios-del-blog',
+  },
 };
 
 export default nextConfig;
