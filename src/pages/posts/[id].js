@@ -5,17 +5,10 @@ import { getAllPostIds, getPostData } from '@lib/posts';
 import Layout from '@components/Layout';
 import WordCounter from '@components/WordCounter';
 import Comment from '@components/Comment';
-import SetCommentScript from '@components/SetCommentScript';
+import PruebaComment from '@components/PruebaComment';
 
 const Post = ({ postData }) => {
   const ReadingTime = WordCounter(postData.contentHtml);
-  const CommentBox = createRef();
-
-  // Agrego el script de los comentarios con Utterances.
-  useEffect(() => {
-    const CommentScript = SetCommentScript();
-    CommentBox && CommentBox.current ? CommentBox.current.appendChild(CommentScript) : console.error(`Error adding utterances comments on: ${CommentBox}`);
-  }, [CommentBox]);
 
   return (
     <Layout>
@@ -35,7 +28,7 @@ const Post = ({ postData }) => {
         <div>
           <div>
             <h2>Comentarios</h2>
-            <Comment CommentBox={CommentBox} />
+            <Comment />
           </div>
         </div>
       </article>
