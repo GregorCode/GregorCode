@@ -1,56 +1,37 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { useTheme } from 'next-themes';
-import { useRouter } from 'next/router';
-import { name } from '@components/Layout';
-import { IoSunnyOutline, IoMoonOutline } from 'react-icons/io5';
+import SelectLanguage from '@components/SelectLanguage';
+import ChangeTheme from '@components/ChangeTheme';
+
+export const siteTitle = `GregorCode`;
+export const name = `() => { ${siteTitle} }`;
 
 const Header = ({ home }) => {
-  const { theme, setTheme } = useTheme();
-  const router = useRouter();
-
-  const onSelectChange = (e) => {
-    const locale = e.target.value;
-    router.push(router.asPath, router.asPath, {
-      locale,
-      scroll: false,
-    });
-  };
-
   return (
-    <>
-      <select name="languages" onChange={onSelectChange}>
-        {router.locales.map((language) => (
-          <option key={language} value={language}>
-            {language === 'es' ? 'ES' : 'EN'}
-          </option>
-        ))}
-      </select>
-      <div>
-        <button onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}>{theme === 'dark' ? <IoSunnyOutline size="4rem" /> : <IoMoonOutline size="4rem" />}</button>
-      </div>
-      {home ? (
-        <>
-          <Image priority src="/images/logo.svg" height={130} width={130} alt={name} />
-          <h1>{name}</h1>
-          home normal
-        </>
-      ) : (
-        <>
-          <Link href="/" passHref>
-            <a>
-              <Image priority src="/images/logo.svg" height={100} width={100} alt={name} />
-            </a>
-          </Link>
-          <h2>
+    <header>
+      <SelectLanguage />
+      <ChangeTheme />
+
+      <div className="sticky top-0 flex flex-col items-center justify-between w-full max-w-3xl mx-auto px-4 tablet:px-8 py-4">
+        {home ? (
+          <>
+            <Image priority src="/images/logo.svg" height={130} width={130} alt={name} />
+            <h1 className="mt-6">{name}</h1>
+          </>
+        ) : (
+          <>
+            <Link href="/" passHref>
+              <a>
+                <Image priority src="/images/logo.svg" height={100} width={100} alt={name} />
+              </a>
+            </Link>
             <Link href="/" passHref>
               <span>{name}</span>
             </Link>
-          </h2>
-          home id
-        </>
-      )}
-    </>
+          </>
+        )}
+      </div>
+    </header>
   );
 };
 

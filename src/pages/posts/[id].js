@@ -1,11 +1,11 @@
 import Head from 'next/head';
-import { createRef, useEffect } from 'react';
+//import { createRef, useEffect } from 'react';
 import Date from '@components/Date';
 import { getAllPostIds, getPostData } from '@lib/posts';
 import Layout from '@components/Layout';
 import WordCounter from '@components/WordCounter';
 import Comment from '@components/Comment';
-import PruebaComment from '@components/PruebaComment';
+//import PruebaComment from '@components/PruebaComment';
 
 const Post = ({ postData }) => {
   const ReadingTime = WordCounter(postData.contentHtml);
