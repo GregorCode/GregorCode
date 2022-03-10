@@ -9,8 +9,10 @@ export const name = `() => { ${siteTitle} }`;
 const Header = ({ home }) => {
   return (
     <header>
-      <SelectLanguage />
-      <ChangeTheme />
+      <div className="flex flex-row-reverse space-x-4 space-x-reverse">
+        <ChangeTheme />
+        <SelectLanguage />
+      </div>
 
       <div className="sticky top-0 flex flex-col items-center justify-between w-full max-w-3xl mx-auto px-4 tablet:px-8 py-4">
         {home ? (

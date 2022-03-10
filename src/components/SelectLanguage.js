@@ -11,7 +11,7 @@ const SelectLanguage = () => {
   };
 
   return (
-    <select name="languages" onChange={onSelectChange}>
+    <select className="cursor-pointer bg-inherit dark:bg-gray-800 focus-outline" name="languages" onChange={onSelectChange}>
       {router.locales.map((language) => (
         <option key={language} value={language}>
           {language === 'es' ? 'ES' : 'EN'}
