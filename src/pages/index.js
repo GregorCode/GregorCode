@@ -14,12 +14,13 @@ export const Home = ({ allPostsData }) => {
       <Head>
         <title>{siteTitle}</title>
       </Head>
-      <section>
-        <ul>
+      <section className="mt-6">
+        <h2>Posts</h2>
+        <ul className="flex flex-col space-y-5 p-6">
           {allPostsData.map(({ id, date, title }) => (
             <li key={id}>
               <Link href={`/posts/${id}`} passHref>
-                <a>{title}</a>
+                <a className="no-underline hover:underline dark">{title}</a>
               </Link>
               <br />
               <small>

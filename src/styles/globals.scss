@@ -5,10 +5,10 @@
     font-family: Georgia, sans-serif;
   }
   h1 {
-    @apply text-3xl;
+    @apply text-4xl;
   }
   h2 {
-    @apply text-xl;
+    @apply text-3xl;
   }
   h3 {
     @apply text-lg;
@@ -23,7 +23,7 @@
 
 @layer utilities {
   .grid-wrapper {
-    @apply grid grid-cols-[1fr,min(100ch,100%),1fr];
+    @apply grid grid-cols-[1fr,min(90ch,100%),1fr];
   }
   .grid-wrapper > * {
     grid-column: 2;

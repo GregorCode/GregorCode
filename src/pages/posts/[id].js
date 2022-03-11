@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import Link from 'next/link';
 //import { createRef, useEffect } from 'react';
 import Date from '@components/Date';
 import { getAllPostIds, getPostData } from '@lib/posts';
@@ -25,11 +26,16 @@ const Post = ({ postData }) => {
           <div>Lectura de {ReadingTime} min</div>
         </div>
         <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
+
         <div>
-          <div>
-            <h2>Comentarios</h2>
-            <Comment />
-          </div>
+          <Link href="/" passHref>
+            <span>← Ir al inicio</span>
+          </Link>
+        </div>
+
+        <div>
+          <h2>Comentarios</h2>
+          <Comment />
         </div>
       </article>
     </Layout>
