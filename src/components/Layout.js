@@ -4,7 +4,7 @@ import Footer from '@components/Footer';
 import { siteTitle } from '@components/Header';
 
 const Layout = ({ children, home }) => {
-  const sectionClassName = 'flex flex-col px-4 h-screen justify-between tablet:px-8';
+  const sectionClassName = 'flex flex-col h-screen';
   return (
     <>
       <Head>
@@ -13,7 +13,7 @@ const Layout = ({ children, home }) => {
       <div className="grid-wrapper min-h-content">
         <div className={sectionClassName}>
           {home ? <Header home /> : <Header />}
-          <main className="mb-auto">{children}</main>
+          <main className="flex-grow">{children}</main>
           <Footer />
         </div>
       </div>

@@ -23,7 +23,7 @@
 
 @layer utilities {
   .grid-wrapper {
-    @apply grid grid-cols-[1fr,min(70ch,100%),1fr];
+    @apply grid grid-cols-[1fr,min(80ch,100%),1fr];
   }
   .grid-wrapper > * {
     grid-column: 2;
@@ -41,11 +41,20 @@
 
 @import 'vars';
 
-.probando {
-  background-color: $fondo-claro;
-  color: red !important;
+blockquote {
+  border-left: 0.3rem solid $letra-oscura;
+  padding-left: 1rem;
+  margin: 1rem;
 }
 
-body {
-  background-color: $fondo-claro;
+code {
+  font-family: Consolas, Monaco, Andale Mono, monospace;
+  line-height: 1.5;
+  font-size: 14px;
+  display: block;
+  background-color: $background-color-code;
+  overflow: hidden;
+  border-radius: 3px;
+  padding: 2px;
+  color: white;
 }

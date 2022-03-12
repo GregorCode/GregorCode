@@ -7,7 +7,9 @@ import { siteTitle } from '@components/Header';
 import { getSortedPostsData } from '@lib/posts';
 import Date from '@components/Date';
 
-export const Home = ({ allPostsData }) => {
+export const CustomLink = 'p-1 rounded-md ease-in duration-200 no-underline text-black hover:bg-gray-300 dark:text-white dark:hover:bg-gray-700';
+
+const Home = ({ allPostsData }) => {
   const router = useRouter();
   const { locale } = router;
   return (
@@ -17,11 +19,11 @@ export const Home = ({ allPostsData }) => {
       </Head>
       <h2 className="my-5">Posts</h2>
       <section>
-        <ul className="flex flex-col space-y-5 p-4">
+        <ul className="space-y-5 p-4">
           {allPostsData.map(({ id, date, title }) => (
             <li key={id}>
               <Link href={`/posts/${id}`} passHref>
-                <a className="p-1 rounded-md ease-in duration-300 no-underline text-black hover:bg-gray-300 dark:text-white dark:hover:bg-gray-700">{title}</a>
+                <a className={CustomLink}>{title}</a>
               </Link>
               <br />
               <small className="pl-2 text-gray-500">

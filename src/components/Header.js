@@ -2,6 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import SelectLanguage from '@components/SelectLanguage';
 import ChangeTheme from '@components/ChangeTheme';
+import { CustomLink } from '@pages/index';
 
 export const siteTitle = `GregorCode`;
 export const name = `() => { ${siteTitle} }`;
@@ -14,7 +15,7 @@ const Header = ({ home }) => {
         <SelectLanguage />
       </div>
 
-      <div className="sticky top-0 flex flex-col items-center justify-between w-full max-w-3xl mx-auto px-4 tablet:px-8 py-4">
+      <div className="top-0 flex flex-col items-center justify-between">
         {home ? (
           <>
             <Image priority src="/images/logo.svg" height={100} width={100} alt={name} />
@@ -28,7 +29,7 @@ const Header = ({ home }) => {
               </a>
             </Link>
             <Link href="/" passHref>
-              <span>{name}</span>
+              <a className={CustomLink}>{name}</a>
             </Link>
           </>
         )}

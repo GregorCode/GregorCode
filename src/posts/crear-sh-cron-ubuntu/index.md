@@ -4,7 +4,7 @@ author: 'Gregorys González'
 date: '2022-02-12'
 ---
 
-Crearemos un .sh que nos permita reiniciar el servidor de aplicaciones Tomcat cada cierto tiempo.
+Crearemos un archivo .sh que nos permita reiniciar el servidor de aplicaciones Tomcat cada cierto tiempo.
 
 Source del archivo ReinicioTomcat.sh:
 

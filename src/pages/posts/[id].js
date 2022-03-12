@@ -6,11 +6,10 @@ import { getAllPostIds, getPostData } from '@lib/posts';
 import Layout from '@components/Layout';
 import WordCounter from '@components/WordCounter';
 import Comment from '@components/Comment';
-//import PruebaComment from '@components/PruebaComment';
+import { CustomLink } from '@pages/index';
 
 const Post = ({ postData }) => {
   const ReadingTime = WordCounter(postData.contentHtml);
-
   return (
     <Layout>
       <Head>
@@ -18,25 +17,25 @@ const Post = ({ postData }) => {
       </Head>
       <article>
         <h1>{postData.title}</h1>
-        <div>
+
+        <div className="flex items-center justify-between py-4 px-10 text-gray-500">
           <div>Por {postData.author}</div>
           <div>
             <Date dateString={postData.date} />
           </div>
           <div>Lectura de {ReadingTime} min</div>
         </div>
-        <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
 
-        <div>
-          <Link href="/" passHref>
-            <span>← Ir al inicio</span>
-          </Link>
-        </div>
+        <divn className="leading-8" dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
 
-        <div>
+        <div className="my-8">
           <h2>Comentarios</h2>
           <Comment />
         </div>
+
+        <Link href="/" passHref>
+          <a className={CustomLink}>← Ir al inicio</a>
+        </Link>
       </article>
     </Layout>
   );

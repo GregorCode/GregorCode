@@ -14,7 +14,7 @@ class MyDocument extends Document {
           <link rel="icon" href="/logo.ico" />
           {/* <link rel="manifest" href="/manifest.json" /> */}
         </Head>
-        <body className="dark:bg-gray-800">
+        <body className="bg-gray-100 dark:bg-gray-900">
           <Main />
           <NextScript />
         </body>

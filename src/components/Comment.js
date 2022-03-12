@@ -13,6 +13,7 @@ export default class Comments extends Component {
     script.setAttribute('async', true);
     script.setAttribute('repo', process.env.COMMENT_BLOG);
     script.setAttribute('issue-term', 'title');
+    // script.setAttribute('theme', locale === 'es' ? 'github-light' : 'github-dark');
     script.setAttribute('theme', 'github-light');
     this.commentBox.current.appendChild(script);
   }
