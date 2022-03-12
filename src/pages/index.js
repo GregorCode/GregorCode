@@ -2,7 +2,8 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { useState } from 'react';
-import Layout, { siteTitle } from '@components/Layout';
+import Layout from '@components/Layout';
+import { siteTitle } from '@components/Header';
 import { getSortedPostsData } from '@lib/posts';
 import Date from '@components/Date';
 
@@ -14,16 +15,16 @@ export const Home = ({ allPostsData }) => {
       <Head>
         <title>{siteTitle}</title>
       </Head>
-      <section className="mt-6">
-        <h2>Posts</h2>
-        <ul className="flex flex-col space-y-5 p-6">
+      <h2 className="my-5">Posts</h2>
+      <section>
+        <ul className="flex flex-col space-y-5 p-4">
           {allPostsData.map(({ id, date, title }) => (
             <li key={id}>
               <Link href={`/posts/${id}`} passHref>
-                <a className="no-underline hover:underline dark">{title}</a>
+                <a className="p-1 rounded-md ease-in duration-300 no-underline text-black hover:bg-gray-300 dark:text-white dark:hover:bg-gray-700">{title}</a>
               </Link>
               <br />
-              <small>
+              <small className="pl-2 text-gray-500">
                 <Date dateString={date} locale={locale} />
               </small>
             </li>

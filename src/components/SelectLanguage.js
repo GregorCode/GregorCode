@@ -2,6 +2,7 @@ import { useRouter } from 'next/router';
 
 const SelectLanguage = () => {
   const router = useRouter();
+
   const onSelectChange = (e) => {
     const locale = e.target.value;
     router.push(router.asPath, router.asPath, {
