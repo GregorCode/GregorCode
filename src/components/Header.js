@@ -8,6 +8,7 @@ export const siteTitle = `GregorCode`;
 export const name = `() => { ${siteTitle} }`;
 
 const Header = ({ home }) => {
+  const CustomLinkPosts = CustomLink + ' text-xl';
   return (
     <header>
       <div className="flex flex-row-reverse space-x-4 space-x-reverse">
@@ -29,7 +30,7 @@ const Header = ({ home }) => {
               </a>
             </Link>
             <Link href="/" passHref>
-              <a className={CustomLink}>{name}</a>
+              <a className={CustomLinkPosts}>{name}</a>
             </Link>
           </>
         )}

@@ -5,7 +5,7 @@ import Date from '@components/Date';
 import { getAllPostIds, getPostData } from '@lib/posts';
 import Layout from '@components/Layout';
 import WordCounter from '@components/WordCounter';
-import Comment from '@components/Comment';
+import Comments from '@components/Comments';
 import { CustomLink } from '@pages/index';
 
 const Post = ({ postData }) => {
@@ -15,7 +15,7 @@ const Post = ({ postData }) => {
       <Head>
         <title>{postData.title}</title>
       </Head>
-      <article>
+      <article className="mt-6">
         <h1>{postData.title}</h1>
 
         <div className="flex items-center justify-between py-4 px-10 text-gray-500">
@@ -26,11 +26,11 @@ const Post = ({ postData }) => {
           <div>Lectura de {ReadingTime} min</div>
         </div>
 
-        <divn className="leading-8" dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
+        <div className="leading-8" dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
 
         <div className="my-8">
           <h2>Comentarios</h2>
-          <Comment />
+          <Comments />
         </div>
 
         <Link href="/" passHref>
