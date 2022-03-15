@@ -2,9 +2,7 @@ import React, { useRef, useEffect, useState } from 'react';
 
 const Comments = () => {
   const comment = useRef(null);
-
   const url = 'https://utteranc.es/client.js';
-
   const [status, setStatus] = useState(url ? 'loading' : 'idle');
 
   useEffect(() => {
@@ -40,7 +38,7 @@ const Comments = () => {
         script.removeEventListener('error', setAttributeStatus);
       }
     };
-  }, [url, comment]);
+  }, [comment, url]);
 
   return <div className="w-full">{<div ref={comment}></div>}</div>;
 };

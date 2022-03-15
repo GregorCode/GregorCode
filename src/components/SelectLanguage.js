@@ -13,7 +13,7 @@ const SelectLanguage = () => {
   };
 
   return (
-    <select className="cursor-pointer bg-inherit focus-outline" name="languages" onChange={onSelectChange} defaultValue={locale === 'es' ? 'es' : 'en'}>
+    <select className="cursor-pointer bg-inherit focus-outline focus:flow" name="languages" onChange={onSelectChange} defaultValue={locale === 'es' ? 'es' : 'en'}>
       {router.locales.map((language) => (
         <option className="text-gray-800 dark:text-gray-800" key={language} value={language}>
           {language === 'es' ? 'ES' : 'EN'}

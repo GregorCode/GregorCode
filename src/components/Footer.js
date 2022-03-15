@@ -7,7 +7,7 @@ const Footer = () => {
   const styleIcon = 'h-5 w-5 text-black hover:text-gray-600 dark:text-white dark:hover:text-gray-400';
 
   return (
-    <div className="flex items-center justify-center py-3">
+    <div className="flex items-center justify-center py-3 sticky bottom-0 bg-gray-100 dark:bg-gray-800">
       {/* ABOUT ME */}
       <div className="flex mt-4 space-x-6 sm:justify-center md:mt-0">
         <Link href="/about" passHref>
