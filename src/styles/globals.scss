@@ -24,7 +24,7 @@
   }
 
   blockquote {
-    border-left: 0.3rem solid $letra-oscura;
+    border-left: 0.3rem solid $letra-clara;
     padding-left: 1rem;
     margin: 1rem;
   }
@@ -47,7 +47,7 @@
 
 @layer utilities {
   .grid-wrapper {
-    @apply grid grid-cols-[1fr,min(80ch,100%),1fr];
+    @apply grid grid-cols-[1fr,min(75ch,100%),1fr];
   }
   .grid-wrapper > * {
     grid-column: 2;

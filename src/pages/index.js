@@ -1,14 +1,16 @@
 import Head from 'next/head';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
+import useTranslation from 'next-translate/useTranslation';
+import { getSortedPostsData } from '@lib/posts';
 import Layout from '@components/Layout';
 import { siteTitle } from '@components/Header';
-import { getSortedPostsData } from '@lib/posts';
 import Date from '@components/Date';
 
 export const CustomLink = 'p-1 rounded-md ease-in duration-200 no-underline text-black hover:bg-gray-300 dark:text-white dark:hover:bg-gray-700';
 
 const Home = ({ allPostsData }) => {
+  const { t } = useTranslation();
   const router = useRouter();
   const { locale } = router;
   return (
@@ -16,7 +18,7 @@ const Home = ({ allPostsData }) => {
       <Head>
         <title>{siteTitle}</title>
       </Head>
-      <h2 className="my-5">Posts</h2>
+      <h2 className="my-5">{t('common:Posts')}</h2>
       <section>
         <ul className="space-y-5 p-4">
           {allPostsData.map(({ id, date, title }) => (

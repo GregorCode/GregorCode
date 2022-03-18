@@ -1,5 +1,3 @@
 {
-  "greeting": "Hello World!",
-  "blog": "Blog",
-  "tailwindcss": "Some examples with Tailwind CSS"
+  "Posts": "Posts"
 }
