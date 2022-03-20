@@ -1,5 +1,7 @@
 import Document, { Html, Head, Main, NextScript } from 'next/document';
 
+export const Autor = `Gregorys González`;
+
 class MyDocument extends Document {
   render() {
     return (
@@ -8,7 +10,7 @@ class MyDocument extends Document {
           <meta charSet="utf-8" />
           <meta name="description" content="Aprende como construir un blog personal con Next.js, React.js, Markdown y Sass" />
           <meta name="keywords" content="javascript, nextjs, reactjs, markdown, sass, docker" />
-          <meta name="author" content="Gregorys González" />
+          <meta name="author" content={Autor} />
           {/* <meta name="copyright" content="Propietario del copyright" /> */}
 
           <link rel="icon" href="/logo.ico" />

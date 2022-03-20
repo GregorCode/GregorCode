@@ -5,6 +5,7 @@ date: '2022-02-13'
 ---
 
 **FTP (File Transfer Protocol)** es un protocolo de red para la transferencia de archivos entre dos equipos conectados a una red TCP (Transmission Control Protocol), esta basado en la arquitectura cliente-servidor.
+
 Este protocolo permite que desde un equipo (cliente) se pueda conectar a un servidor para descargar archivos desde él o para enviarle archivos, sin importar el sistema operativo que estén usando ambos equipo.
 
 Para crear un FTP con Docker-compose lo podemos hacer de la siguiente manera:

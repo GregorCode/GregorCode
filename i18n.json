@@ -3,6 +3,7 @@
   "defaultLocale": "es",
   "pages": {
     "*": ["common"],
-    "/about": ["about"]
+    "/about": ["about"],
+    "/posts/[id]": ["posts"]
   }
 }

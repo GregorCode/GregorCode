@@ -4,8 +4,8 @@ const SelectLanguage = () => {
   const router = useRouter();
   const { locale } = router;
 
-  const onSelectChange = (e) => {
-    const locale = e.target.value;
+  const onSelectChange = (event) => {
+    const locale = event.target.value;
     router.push(router.asPath, router.asPath, {
       locale,
       scroll: false,
