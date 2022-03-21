@@ -19,14 +19,14 @@ const Header = ({ home }) => {
       <div className="top-0 flex flex-col items-center justify-between">
         {home ? (
           <>
-            <Image priority src="/images/logo.svg" height={100} width={100} alt={name} />
-            <h1 className="mt-4">{name}</h1>
+            <Image priority src="/images/logo.svg" height={80} width={80} alt={name} />
+            <h2 className="mt-2">{name}</h2>
           </>
         ) : (
           <>
             <Link href="/" passHref>
               <a>
-                <Image priority src="/images/logo.svg" height={80} width={80} alt={name} />
+                <Image priority src="/images/logo.svg" height={60} width={60} alt={name} />
               </a>
             </Link>
             <Link href="/" passHref>

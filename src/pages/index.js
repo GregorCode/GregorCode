@@ -7,7 +7,6 @@ import { getSortedPostsData } from '@lib/posts';
 import Layout from '@components/Layout';
 import { siteTitle } from '@components/Header';
 import Date from '@components/Date';
-//import SearchBar from '@components/SearchBar';
 
 export const CustomLink = 'p-1 rounded-md ease-in duration-200 no-underline text-black hover:bg-gray-300 dark:text-white dark:hover:bg-gray-700';
 
@@ -41,8 +40,12 @@ const Home = ({ allPostsData }) => {
       <Head>
         <title>{siteTitle}</title>
       </Head>
-      <h2 className="my-5">{t('Posts')}</h2>
-      <input value={busqueda} placeholder="Buscar en este Blog" onChange={handleChange} />
+
+      <div className="mt-10 mb-5 flex items-center justify-between">
+        <h2>{t('Posts')}</h2>
+        <input className="bg-transparent focus:outline-none border-b border-gray-500" value={busqueda} placeholder={t('Placeholder')} onChange={handleChange} />
+      </div>
+
       <section>
         <ul className="space-y-5 p-4">
           {posts &&
