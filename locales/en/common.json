@@ -1,4 +1,5 @@
 {
   "Posts": "Posts",
-  "Placeholder": "Search in this Blog"
+  "Placeholder": "Search in this Blog",
+  "NoResultados": "There are no results for the search: \"{{busqueda}}\""
 }

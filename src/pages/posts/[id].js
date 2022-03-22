@@ -15,6 +15,7 @@ const Post = ({ postData }) => {
     <Layout>
       <Head>
         <title>{postData.title}</title>
+        {/* <meta property="og:title" content="FTP con Docker-compose" /> */}
       </Head>
       <article className="mt-6">
         <h1>{postData.title}</h1>

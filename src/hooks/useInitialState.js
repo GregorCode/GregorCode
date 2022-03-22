@@ -1,30 +1,31 @@
 import { useState } from 'react';
 
 const initialState = {
-  lenguage: '',
+  posts: [],
+  search: '',
 };
 
 const useInitialState = () => {
   const [state, setState] = useState(initialState);
 
-  const toggleOrder = () => {
+  const setSearchBar = (word) => {
     setState({
       ...state,
-      orderIsOpen: !state.orderIsOpen,
+      search: word,
     });
   };
 
-  const toggleMenu = () => {
+  const setPosts = (posts) => {
     setState({
       ...state,
-      menuIsOpen: !state.menuIsOpen,
+      posts: posts,
     });
   };
 
   return {
     state,
-    toggleOrder,
-    toggleMenu,
+    setSearchBar,
+    setPosts,
   };
 };
 

@@ -1,4 +1,5 @@
 {
   "Posts": "Publicaciones",
-  "Placeholder": "Buscar en este Blog"
+  "Placeholder": "Buscar en este Blog",
+  "NoResultados": "No hay resultados para la busqueda: \"{{busqueda}}\""
 }
