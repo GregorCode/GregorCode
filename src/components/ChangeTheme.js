@@ -17,9 +17,13 @@ const ChangeTheme = () => {
         <button className="flex p-2 text-yellow-400 focus-outline hover:glow" onClick={() => setTheme('light')}>
           <IoSunnyOutline size="2rem" />
         </button>
-      ) : (
+      ) : theme === 'light' ? (
         <button className="flex p-2 text-yellow-400 focus-outline hover:glow" onClick={() => setTheme('dark')}>
           <IoMoonOutline size="2rem" />
+        </button>
+      ) : (
+        <button className="flex p-2 text-yellow-400 focus-outline hover:glow" onClick={() => setTheme('light')}>
+          <IoSunnyOutline size="2rem" />
         </button>
       )}
     </>
