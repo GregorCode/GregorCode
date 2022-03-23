@@ -17,7 +17,6 @@ const useInitialState = () => {
   return {
     state,
     setSearchBar,
-    setPosts,
   };
 };
 
