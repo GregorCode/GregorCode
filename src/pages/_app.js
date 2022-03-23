@@ -7,7 +7,7 @@ function MyApp({ Component, pageProps }) {
   const initialState = useInitialState();
   return (
     <AppContext.Provider value={initialState}>
-      <ThemeProvider attribute="class">
+      <ThemeProvider attribute="class" enableSystem={false}>
         <Component {...pageProps} />
       </ThemeProvider>
     </AppContext.Provider>
