@@ -15,7 +15,6 @@ const Home = ({ allPostsData }) => {
   const { t } = useTranslation('common');
   const router = useRouter();
   const { locale } = router;
-
   const { state, setSearchBar } = useContext(AppContext);
   const [posts, setPosts] = useState(allPostsData);
 
