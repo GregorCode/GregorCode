@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import Link from 'next/link';
-import { useEffect, useContext } from 'react';
+import { useEffect, useContext, useState } from 'react';
 import { useRouter } from 'next/router';
 import useTranslation from 'next-translate/useTranslation';
 import { getSortedPostsData } from '@lib/posts';
@@ -15,7 +15,9 @@ const Home = ({ allPostsData }) => {
   const { t } = useTranslation('common');
   const router = useRouter();
   const { locale } = router;
-  const { state, setSearchBar, setPosts } = useContext(AppContext);
+
+  const { state, setSearchBar } = useContext(AppContext);
+  const [posts, setPosts] = useState(allPostsData);
 
   const handleChange = (event) => {
     setSearchBar(event.target.value);
@@ -23,16 +25,12 @@ const Home = ({ allPostsData }) => {
 
   useEffect(() => {
     if (allPostsData) {
-      if (state.search) {
-        const resultadoBusqueda = allPostsData.filter((post) => {
-          return post.title.toString().toLowerCase().includes(state.search.toString().toLowerCase());
-        });
-        setPosts(resultadoBusqueda);
-      } else {
-        setPosts(allPostsData);
-      }
+      const resultadoBusqueda = allPostsData.filter((post) => {
+        return post.title.toString().toLowerCase().includes(state.search.toString().toLowerCase());
+      });
+      setPosts(resultadoBusqueda);
     }
-  }, [allPostsData, state.search]);
+  }, [allPostsData, state]);
 
   return (
     <Layout home>
@@ -47,8 +45,8 @@ const Home = ({ allPostsData }) => {
 
       <section>
         <ul className="space-y-5 p-4">
-          {state.posts.length > 0 ? (
-            state.posts.map(({ id, date, title }) => (
+          {posts.length > 0 ? (
+            posts.map(({ id, date, title }) => (
               <li key={id}>
                 <Link href={`/posts/${id}`} locale={locale}>
                   <a className={CustomLink}>{title}</a>
