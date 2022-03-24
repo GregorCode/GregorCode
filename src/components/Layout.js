@@ -4,7 +4,7 @@ import Footer from '@components/Footer';
 import { siteTitle } from '@components/Header';
 
 const Layout = ({ children, home }) => {
-  const sectionClassName = 'flex flex-col h-screen';
+  const sectionClassName = 'flex flex-col h-screen sm:px-3 md:px-0';
   return (
     <>
       <Head>

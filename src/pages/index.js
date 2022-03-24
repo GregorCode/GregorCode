@@ -38,12 +38,12 @@ const Home = ({ allPostsData }) => {
       </Head>
 
       <div className="mt-10 mb-5 flex items-center justify-between">
-        <h2>{t('Posts')}</h2>
-        <input className="bg-transparent focus:outline-none border-b border-gray-500" value={state.search} placeholder={t('Placeholder')} onChange={handleChange} />
+        <div className="sm:text-xl md:text-2xl">{t('Posts')}</div>
+        <input className="sm:text-xs md:text-base bg-transparent focus:outline-none border-b border-gray-500" value={state.search} placeholder={t('Placeholder')} onChange={handleChange} />
       </div>
 
       <section>
-        <ul className="space-y-5 p-4">
+        <ul className="space-y-5 p-4 sm:text-xs md:text-base">
           {posts.length > 0 ? (
             posts.map(({ id, date, title }) => (
               <li key={id}>

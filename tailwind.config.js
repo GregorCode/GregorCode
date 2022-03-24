@@ -3,7 +3,10 @@ module.exports = {
   safelist: ['dark', 'light'],
   darkMode: 'class',
   theme: {
-    extend: {},
+    screens: {
+      sm: '360px',
+      md: '768px',
+    },
   },
   variants: { typography: ['dark'] },
   plugins: [require('@tailwindcss/typography')],
