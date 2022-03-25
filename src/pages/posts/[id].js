@@ -20,7 +20,7 @@ const Post = ({ postData }) => {
       <article className="mt-6">
         <div className="sm:text-base md:text-2xl">{postData.title}</div>
 
-        <div className="flex items-center justify-between py-4 px-10 text-gray-500 sm:text-xs md:text-base">
+        <div className="flex items-center justify-between sm:py-3 md:py-4 sm:px-4 md:px-10 text-gray-500 sm:text-xsxs md:text-base">
           <div>
             {t('Por')} {postData.author}
           </div>
@@ -30,7 +30,7 @@ const Post = ({ postData }) => {
           <div>{t('Lectura', { minutos: ReadingTime })}</div>
         </div>
 
-        <div className="leading-8 sm:text-xs md:text-base" dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
+        <div className="sm:leading-7 md:leading-7 sm:text-xs md:text-base" dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
 
         <div className="my-8">
           <div className="sm:text-base md:text-2xl">{t('Comentarios')}</div>
