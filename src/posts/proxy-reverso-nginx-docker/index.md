@@ -2,6 +2,7 @@
 title: 'Crear Proxy reverso entre Nginx y Tomcat con Docker'
 author: 'Gregorys González'
 date: '2022-02-10'
+slug: 'proxy-reverso-nginx-docker'
 ---
 
 Las aplicaciones web desarrolladas en Java se despliegan en un contenedor de servlets o un servidor de aplicaciones como Tomcat o Wildfly, en muchos casos, para que los usuarios puedan acceder a las aplicaciones desplegadas en estos servidores se configura un servidor web como Nginx o Apache con el objetivo de que se realicen algunas tareas de seguridad, balanceo de carga, redirecciones, forzar el uso del protocolo HTTPS, entre otros.

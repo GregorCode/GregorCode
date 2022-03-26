@@ -2,6 +2,7 @@
 title: 'Most used commands in Docker.'
 author: 'Gregorys González'
 date: '2022-01-18'
+slug: 'comandos-mas-usado-docker'
 ---
 
 **Commands to manage containers (Docker):**

@@ -2,6 +2,7 @@
 title: 'FTP con Docker-compose'
 author: 'Gregorys González'
 date: '2022-02-13'
+slug: 'ftp-con-docker-compose'
 ---
 
 **FTP (File Transfer Protocol)** es un protocolo de red para la transferencia de archivos entre dos equipos conectados a una red TCP (Transmission Control Protocol), esta basado en la arquitectura cliente-servidor.

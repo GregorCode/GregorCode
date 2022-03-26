@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 import useTranslation from 'next-translate/useTranslation';
 import { getAllPostIds, getPostData } from '@lib/posts';
 import Date from '@components/Date';
@@ -9,13 +10,20 @@ import Comments from '@components/Comments';
 import { CustomLink } from '@pages/index';
 
 const Post = ({ postData }) => {
+  const router = useRouter();
+  const { locale } = router;
   const { t } = useTranslation('posts');
   const ReadingTime = WordCounter(postData.contentHtml);
   return (
     <Layout>
       <Head>
         <title>{postData.title}</title>
-        {/* <meta property="og:title" content="FTP con Docker-compose" /> */}
+        <meta name="description" content={postData.title} />
+        <meta property="og:title" content={postData.title} />
+        <meta property="og:description" content={postData.title} />
+        <meta property="og:locale" content={locale === 'es' ? 'es_ES' : 'en_US'} />
+        <meta property="og:url" content={locale === 'es' ? `${process.env.DOMAIN_PROD_ES}${postData.slug}` : `${process.env.DOMAIN_PROD_EN}${postData.slug}`} />
+        <meta property="og:type" content="website" />
       </Head>
       <article className="mt-6">
         <div className="sm:text-base md:text-2xl">{postData.title}</div>

@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import Image from 'next/image';
 import useTranslation from 'next-translate/useTranslation';
 import Layout from '@components/Layout';
@@ -7,6 +8,10 @@ const About = () => {
   const { t } = useTranslation('about');
   return (
     <Layout>
+      <Head>
+        <title>About me</title>
+        <meta name="description" content="Desarrollador de Software, Uruguay" />
+      </Head>
       <div className="flex sm:flex-col md:flex-row rounded-xl shadow-2xl border mt-10 bg-gray-100 dark:bg-gray-800">
         <Image priority src="/images/profile.jpg" alt="Gregor" className="rounded-lg" height="800" width="1000" />
         <div className="text-center md:text-left sm:text-left sm:p-6 md:p-6 sm:space-y-2 md:space-y-3">

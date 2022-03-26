@@ -2,6 +2,7 @@
 title: 'Create a network in Docker where your containers can be hosted.'
 author: 'Gregorys González'
 date: '2022-01-12'
+slug: 'red-docker-contenedores'
 ---
 
 **Docker** allows us to create subnets to host the containers.

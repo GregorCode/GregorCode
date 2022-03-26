@@ -2,6 +2,7 @@
 title: 'Cambiar el directorio por defecto donde Docker guarda su metadata en Ubuntu'
 author: 'Gregorys González'
 date: '2022-01-15'
+slug: 'cambiar-directorio-docker-metadata'
 ---
 
 Para cambiar el directorio donde **Docker** guarda su metadata se debe crear un archivo llamado daemon.json el cual permite configurar el demonio de Docker. El archivo debe estar en la ruta /etc/docker/ si el archivo no se encuentra, se debe crear.

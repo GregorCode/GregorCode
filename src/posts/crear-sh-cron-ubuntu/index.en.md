@@ -2,6 +2,7 @@
 title: 'Create sh and run it with Cron every 5 minutes. Ubuntu'
 author: 'Gregorys González'
 date: '2022-02-12'
+slug: 'crear-sh-cron-ubuntu'
 ---
 
 We will create a .sh file that will allow us to restart the Tomcat application server from time to time.

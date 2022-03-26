@@ -2,6 +2,7 @@
 title: 'Backup y Restore en texto plano de una base de datos en PostgreSQL ó MySQL'
 author: 'Gregorys González'
 date: '2022-02-05'
+slug: 'backup-restore-postgres-mysql'
 ---
 
 Las copias de seguridad son de suma importancia en cualquier entorno y más aún si nos referimos a Base de Datos. Las bases de datos suelen guardar información muy valiosa y las cuales están en un cambio contínuo, esto hace que sea imprescindible mantener un buen sistema de Backups, en este punto es donde entra postgresql con pg_dump y mysql con mysqldump.

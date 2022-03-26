@@ -2,6 +2,7 @@
 title: 'Enable specific ports in Firewalld and UFW (Ubuntu)'
 author: 'Gregorys González'
 date: '2022-01-22'
+slug: 'habilitar-puertos-ubuntu'
 ---
 
 Both Firewalld and UFW are firewalls that can configure iptables which are used to implement persistent network traffic rules.

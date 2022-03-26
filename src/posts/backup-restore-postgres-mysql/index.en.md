@@ -2,6 +2,7 @@
 title: 'Backup and Restore in plain text of a database in PostgreSQL or MySQL'
 author: 'Gregorys González'
 date: '2022-02-05'
+slug: 'backup-restore-postgres-mysql'
 ---
 
 Backups are of the utmost importance in any environment and even more so if we refer to Databases. Databases usually store very valuable information and which are in continuous change, this makes it essential to maintain a good Backup system, at this point is where postgresql with pg_dump and mysql with mysqldump come in.

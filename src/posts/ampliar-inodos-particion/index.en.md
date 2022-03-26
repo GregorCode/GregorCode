@@ -2,6 +2,7 @@
 title: 'Expand the number of inodes in a partition. Ubuntu'
 author: 'Gregorys González'
 date: '2022-02-11'
+slug: 'ampliar-inodos-particion'
 ---
 
 At my work, we have a QA server where we had created a partition so that Docker could store all its meta-data there, over time, after so many application deployments and file uploads to the server, we ran out of availability of inodes. An inode stores information about a file or directory. Each file is identified by an inode number. This number is unique within the entire file system. If a partition runs out of available inodes, no new files will be allowed to be created on the partition.

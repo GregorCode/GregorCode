@@ -2,6 +2,7 @@
 title: 'Crear sh y ejecutarlo con Cron cada 5 minutos. Ubuntu'
 author: 'Gregorys González'
 date: '2022-02-12'
+slug: 'crear-sh-cron-ubuntu'
 ---
 
 Crearemos un archivo .sh que nos permita reiniciar el servidor de aplicaciones Tomcat cada cierto tiempo.

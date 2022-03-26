@@ -2,6 +2,7 @@
 title: 'Crear en Docker una red donde se puedan alojar tus contenedores'
 author: 'Gregorys González'
 date: '2022-01-12'
+slug: 'red-docker-contenedores'
 ---
 
 **Docker** nos permite crear subredes para alojar los contenedores.

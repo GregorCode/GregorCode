@@ -7,12 +7,9 @@ class MyDocument extends Document {
     return (
       <Html>
         <Head>
-          <meta charSet="utf-8" />
-          <meta name="description" content="Aprende como construir un blog personal con Next.js, React.js, Markdown y Sass" />
           <meta name="keywords" content="javascript, nextjs, reactjs, markdown, sass, docker" />
           <meta name="author" content={Autor} />
-          {/* <meta name="copyright" content="Propietario del copyright" /> */}
-
+          <meta name="robots" content="index,follow" />
           <link rel="icon" href="/logo.ico" />
           {/* <link rel="manifest" href="/manifest.json" /> */}
         </Head>

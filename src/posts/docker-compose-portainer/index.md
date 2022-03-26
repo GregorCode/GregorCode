@@ -2,6 +2,7 @@
 title: 'Docker compose para Portainer'
 author: 'Gregorys González'
 date: '2022-01-29'
+slug: 'docker-compose-portainer'
 ---
 
 **Portainer** es una interfaz gráfica desde donde se puede gestionar y trabajar con contenedores Docker de una forma mucho más intuitiva y sencilla. La GUI se basa en web y es multiplataforma. También nos permite administrar los contenedores de forma remota, forma local o trabajar con contenedores en otras máquinas o servidores.

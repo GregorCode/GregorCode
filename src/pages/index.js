@@ -35,6 +35,7 @@ const Home = ({ allPostsData }) => {
     <Layout home>
       <Head>
         <title>{siteTitle}</title>
+        <meta name="description" content="Blog personal desarrollado con Next.js, React.js, Markdown y Tailwind CSS" />
       </Head>
 
       <div className="mt-10 mb-5 flex items-center justify-between">

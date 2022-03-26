@@ -2,6 +2,7 @@
 title: 'Ampliar el numero de inodos en una partición. Ubuntu'
 author: 'Gregorys González'
 date: '2022-02-11'
+slug: 'ampliar-inodos-particion'
 ---
 
 En mi trabajo, tenemos un servidor de QA donde habíamos creado una partición para que Docker pudiera guardar toda su meta-data ahí, con el pasar del tiempo, después de tantos despliegues de aplicaciones y subida de archivos al servidor, nos quedamos sin disponibilidad de inodos, un inodo almacena información sobre un archivo o directorio. Cada archivo se identifica por un número de inodo. Este número es único dentro de todo el sistema de archivos. Si una partición se queda sin inodos disponibles, no se permitirá la creación de archivos nuevos en la partición.
